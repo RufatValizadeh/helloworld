@@ -1,6 +1,6 @@
 ﻿version: "3.7"
 
-services: 
+services:
   web:
     container_name: "hello-world"
     image: rufatvalizadeh/helloworld:latest
