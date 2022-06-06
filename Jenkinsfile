@@ -13,7 +13,7 @@ node  {
         stage('Setting the variables values') {
                  sh '''
                     #!/bin/bash
-                    echo "$USER"
+                    whoami
                  '''
         }
         stage('Build image') {
