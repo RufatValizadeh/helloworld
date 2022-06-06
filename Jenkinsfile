@@ -20,8 +20,7 @@ node  {
                 app.push("latest")
           }
         }
-        stage('Restart Application')
-        {
+        stage('Restart Application') {
                 sh "docker-compose down"
                 sh "docker-compose up -d"
         }
