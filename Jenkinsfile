@@ -9,7 +9,7 @@ node  {
         stage('Build image') {
             /* This builds the actual image; synonymous to
              * docker build on the command line */
-                app = docker.build("rufatvalizadeh/helloworld/helloworld")
+                app = docker.build("helloworld")
             }
         stage('Push image') {
             /* Finally, we'll push the image with two tags:
