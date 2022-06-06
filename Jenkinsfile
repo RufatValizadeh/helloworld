@@ -18,7 +18,7 @@ node  {
              * Pushing multiple tags is cheap, as all the layers are reused. */
             docker.withRegistry('', 'dockerhub') {
                 app.push("latest")
-          }
+          } 
         }
         stage('Restart Application') {
                 sh "docker-compose down"
