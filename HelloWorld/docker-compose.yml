@@ -4,5 +4,6 @@ services:
   web:
     container_name: "hello-world"
     image: rufatvalizadeh/helloworld:latest
+    privileged: true
     ports:
       - "5949:80"
