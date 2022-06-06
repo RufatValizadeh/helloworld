@@ -10,6 +10,14 @@ node  {
                 def dockerHome = tool 'myDocker'
                 env.PATH = "${dockerHome}/bin:${env.PATH}"
             }
+        stage('Setting the variables values') {
+            steps {
+                 sh '''
+                    #!/bin/bash
+                    echo "$USER"
+                 '''
+            }
+        }
         stage('Build image') {
             /* This builds the actual image; synonymous to
              * docker build on the command line */
