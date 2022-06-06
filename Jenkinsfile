@@ -27,7 +27,7 @@ node  {
         }
     }
     catch(e){
-                slackSend channel: 'jenkinsApp',
+                slackSend channel: 'U03JF5TFX52',
                     color: 'danger',
                     tokenCredentialId:'slack-token',
                     message: "*ERROR:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n Description : ${e}\n More info at: ${env.BUILD_URL}"
