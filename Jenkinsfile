@@ -9,7 +9,7 @@ node  {
         stage('Build image') {
             /* This builds the actual image; synonymous to
              * docker build on the command line */
-                app = docker.build("helloworld")
+                app = docker.build("rufatvalizadeh/helloworld")
             }
         stage('Push image') {
             /* Finally, we'll push the image with two tags:
@@ -27,9 +27,9 @@ node  {
         }
     }
     catch(e){
-                slackSend channel: '#yourchannel',
+                slackSend channel: 'jenkins',
                     color: 'danger',
-                    tokenCredentialId:'slackCredentials',
+                    tokenCredentialId:'slack-token',
                     message: "*ERROR:* Job ${env.JOB_NAME} build ${env.BUILD_NUMBER}\n Description : ${e}\n More info at: ${env.BUILD_URL}"
     
     }
